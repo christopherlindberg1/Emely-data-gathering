@@ -11,7 +11,6 @@ class TextFileReader:
     
     def get_lines(self):
         """ Reads all lines from a text file and returns them as a list of strings """
-        # pass
         try:
             with open("./data/app_data/base_qugestions.txt", "r") as file:
                 return file.readlines()
