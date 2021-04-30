@@ -1,0 +1,37 @@
+
+
+
+.navbar-toggler,
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#header-separator {
+    width: 1px;
+    height: 52px;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+}
+
+nav.navbar .nav-link {
+    color: #ccc !important;
+}
+
+nav.navbar .nav-link:hover {
+    color: #ddd !important;
+}
+
+nav.navbar {
+    background-color: #111;
+    position: fixed;
+    text-align: center;
+}
+
+nav.navbar > .container {
+    position: relative;
+}
