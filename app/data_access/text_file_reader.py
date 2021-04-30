@@ -1,3 +1,5 @@
+import os
+from pathlib import Path
 
 
 class TextFileReader:
@@ -7,12 +9,12 @@ class TextFileReader:
         pass
 
     
-    def get_lines(self, file_path):
+    def get_lines(self):
         """ Reads all lines from a text file and returns them as a list of strings """
+        # pass
         try:
-            with open(file_path, "r") as file:
+            with open("./data/app_data/base_qugestions.txt", "r") as file:
                 return file.readlines()
         except FileNotFoundError:
-            print("O noo")
-
+            raise
 
