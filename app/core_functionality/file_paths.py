@@ -6,5 +6,5 @@ class FilePaths:
 
     project_root = Path(__file__).parent.parent
 
-    dialogues_folder = PurePath(project_root, "data/generated_data")
+    dialogues_folder = PurePath(project_root, "data/generated_data/dialogues")
 
