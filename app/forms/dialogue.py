@@ -1,9 +1,8 @@
-from wtforms import Form, StringField, TextAreaField, PasswordField, SelectField, BooleanField, IntegerField
-from wtforms.validators import Email, DataRequired, EqualTo, NumberRange
+from wtforms import Form, StringField, TextAreaField
+from wtforms.validators import DataRequired
 
 
 class Dialogue(Form):
-    emely_random_question = StringField("Emely is asking you", validators=[DataRequired()])
     user_answer_one = TextAreaField("How would you reply to Emely's question?", validators=[DataRequired()])
     user_follow_up_one = TextAreaField("What would Emely's follow-up question be to your answer?", validators=[DataRequired()])
     user_answer_two = TextAreaField("How would you answer Emely's follow-up question?", validators=[DataRequired()])
