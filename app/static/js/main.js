@@ -1,7 +1,7 @@
 
 
 // Smooth scroll on nav click
-$(".nav-link, .navbar-brand").on("click", function(e) {
+$(".nav-link, .navbar-brand, .link-scroll").on("click", function(e) {
     try {
         if (this.hash !== "") {
             e.preventDefault();
