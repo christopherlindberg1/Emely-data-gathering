@@ -1,0 +1,7 @@
+episode_start
+emely: What makes you a good fit?
+user: I'm just perfect
+emely: Why?
+user: Everybody thinks I'm perfect.
+emely: Alright
+episode_done
