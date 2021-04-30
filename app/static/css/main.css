@@ -45,3 +45,75 @@ nav.navbar {
 nav.navbar > .container {
     position: relative;
 }
+
+.display-4 {
+    font-size: calc(1.75rem + 2.2vw)
+    font-weight: 300;
+}
+
+.display-5 {
+    font-size: calc(1.55rem + 2vw);
+    font-weight: 300;
+}
+
+.display-6 {
+    font-size: calc(1.45rem + 0.5vw);
+    font-weight: 300;
+}
+
+.p {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+}
+
+.p-lg {
+    font-size: 1.3rem !important;
+}
+
+#jumbotron {
+    background: linear-gradient(90deg, royalblue, cornflowerblue);
+    color: #fff;
+}
+
+#jumbotron > .container {
+    min-height: 90vh;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+#section-about {
+    background-color: #eee;
+}
+
+#section-dialogue {
+
+}
+
+#dialogue-content {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dialogue-text {
+    display: block;
+}
+
+#base-question {
+    font-size: calc(1.2rem + 0.75vw);
+    margin-left: 2rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+
+#footer {
+    background-color: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 1rem;
+}
