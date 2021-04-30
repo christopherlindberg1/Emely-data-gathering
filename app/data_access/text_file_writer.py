@@ -11,7 +11,7 @@ class TextFileWriter:
         """ Writes lines from a list of strings to a text file """
         
         try:
-            with open(file_path, "w") as file:
+            with open(file_path, "w+") as file:
                 file.writelines(lines)
         except:
             raise
