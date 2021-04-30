@@ -1,7 +1,7 @@
 
 
 class TextFileReader:
-    """ Class with methods that read from text files """
+    """ Class with methods for reading from text files """
 
     def __init__(self):
         pass
