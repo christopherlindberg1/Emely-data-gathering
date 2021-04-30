@@ -7,6 +7,11 @@ class TextFileWriter:
         pass
 
     
-    def write_lines(self):
+    def write_lines(self, file_path, lines):
         """ Writes lines from a list of strings to a text file """
-        pass
+        
+        try:
+            with open(file_path, "w") as file:
+                file.writelines(lines)
+        except:
+            raise
