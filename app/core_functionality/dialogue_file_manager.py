@@ -28,14 +28,14 @@ class DialogueFileManager:
         Gets a unique file name consisting of date and time, as well as microseconds.
         Makes sure it is unique before returning it.
         """
-        
+
         # file_name = f"{ datetime.datetime.now().strftime('%Y/%m/%d-%I:%M:%S.%f') }-{ randrange(1, 1000) }.txt"
         file_name = f"{ randrange(1, 100000001) }.txt"
         full_file_path = PurePath(folder_path, file_name)
 
         while os.path.isfile(full_file_path) == True:
             # file_name = f"{ datetime.datetime.now().strftime('%Y/%m/%d-%I:%M:%S.%f') }-{ randrange(1, 1000) }.txt"
-            file_name = f"{ randrange(1, 1000001) }.txt"
+            file_name = f"{ randrange(1, 100000001) }.txt"
             full_file_path = PurePath(folder_path, file_name)
         
         return full_file_path
