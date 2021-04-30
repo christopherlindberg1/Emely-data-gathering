@@ -62,3 +62,11 @@ Flask is used to build the web server. Install Flask within the virtual environm
 ```
 $ pip install flask
 ```
+
+```
+pip install WTForms
+```
+
+```
+pip install Flask-WTF
+```
