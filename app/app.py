@@ -8,8 +8,6 @@ from core_functionality.question_generator import QuestionGenerator
 from forms.dialogue import Dialogue
 
 
-
-
 app = Flask(__name__)
 
 text_file_reader = TextFileReader()
@@ -24,6 +22,12 @@ def index():
 
     return render_template("index.html", form = form, question = question)
 
+
+@app.route("/submit-dialogue/", methods = ["POST"])
+def submit_dialogue():
+    """ Saves the user generated data to a text file """
+    if request.method == "POST":
+        return "Hell no."
 
 if __name__ == "__main__":
     app.run(debug=True)
