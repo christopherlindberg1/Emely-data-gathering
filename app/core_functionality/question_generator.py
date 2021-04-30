@@ -20,7 +20,7 @@ class QuestionGenerator:
     def get_questions(self):
         """ Gets all questions. Gets them from a source code file if it fails to read from file """
         try:
-            return self.text_file_reader.get_lines()
+            return self.text_file_reader.read_lines()
         except FileNotFoundError:
             return base_questions
 
