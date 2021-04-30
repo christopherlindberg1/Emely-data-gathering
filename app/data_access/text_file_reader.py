@@ -9,7 +9,7 @@ class TextFileReader:
         pass
 
     
-    def get_lines(self):
+    def read_lines(self):
         """ Reads all lines from a text file and returns them as a list of strings """
         try:
             with open("./data/app_data/base_qugestions.txt", "r") as file:
