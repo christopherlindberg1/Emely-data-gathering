@@ -37,10 +37,11 @@
         <h1 class="display-5 text-center mb-4">Talk to Emely</h1>
         <div id="dialogue-content">
             <span class="dialogue-text p p-lg text-center">You are being interviewed by Emely, and she asks you the following:</span>
-            <span id="base-question" class="dialogue-text p text-center mb-4">- {{ question }}</span>
+            <span id="base-question" class="dialogue-text p text-center mb-4">- {{ base_question }}</span>
 
             {% from "partials/_form-helpers.html" import render_field %}
             <form  method="POST" action="./submit-dialogue/">
+                {{ field }}
                 <div class="form-group mb-4">
                     {{ form.user_answer_one.label(class="p p-lg") }}
                     {{ form.user_answer_one(class="form-control") }}
