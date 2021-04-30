@@ -40,7 +40,7 @@
             <span id="base-question" class="dialogue-text p text-center mb-4">- {{ question }}</span>
 
             {% from "partials/_form-helpers.html" import render_field %}
-            <form  method="POST" action="">
+            <form  method="POST" action="./submit-dialogue/">
                 <div class="form-group mb-4">
                     {{ form.user_answer_one.label(class="p p-lg") }}
                     {{ form.user_answer_one(class="form-control") }}
