@@ -1,5 +1,25 @@
 
 
+.alert {
+    position: fixed;
+    top: 56px;
+    width: 100%;
+    border-radius: 0;
+    display: relative;
+    margin-bottom: 0;
+}
+
+#alert-close-link-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    height: 56px;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+}
+
 #header-separator {
     width: 1px;
     height: 52px;
