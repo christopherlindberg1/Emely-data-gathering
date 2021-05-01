@@ -6,7 +6,6 @@ from random import randrange
 from core_functionality.file_paths import FilePaths
 
 
-
 class DialogueFileManager:
     """ Class responsible for creating an appropriate file structure for dialogue files """
     
@@ -14,8 +13,8 @@ class DialogueFileManager:
         pass
 
 
-    def get_file_path(self):
-        """ Returns a unique file name for a dialogue """
+    def get_file_path(self) -> str:
+        """ Returns a unique file name for a dialogue file """
 
         current_datetime = datetime.datetime.now()
 
@@ -25,10 +24,10 @@ class DialogueFileManager:
         return full_file_path
 
 
-    def __get_unique_file_path(self, folder_path, current_datetime):
+    def __get_unique_file_path(self, folder_path: str, current_datetime: datetime) -> str:
         """
-        Gets a unique file name consisting of date and time, as well as microseconds.
-        Makes sure it is unique before returning it.
+        Gets a unique file name consisting of date and time, as well as microseconds,
+        combines it with a folder path, and returns the full path.
         """
 
         file_name = self.__generate_unique_file_name(folder_path, current_datetime)
@@ -37,7 +36,7 @@ class DialogueFileManager:
         return full_file_path
 
     
-    def __generate_unique_file_name(self, folder_path, current_datetime):
+    def __generate_unique_file_name(self, folder_path: str, current_datetime: datetime) -> str:
         """ Generates a unique file name """
 
         while True:
@@ -57,8 +56,8 @@ class DialogueFileManager:
                 return file_name
 
 
-    def __get_folder_for_datetime(self, date_time):
-        """ Returns the path to the folder that match the current date """
+    def __get_folder_for_datetime(self, date_time: datetime) -> str:
+        """ Returns the path to the folder that match the provided date """
 
         year = date_time.year
         month = date_time.month if len(str(date_time.month)) == 2 else f"0{ date_time.month }"
@@ -72,8 +71,8 @@ class DialogueFileManager:
             return self.__create_folder_for_datetime_and_return_path(date_time)
 
 
-    def __create_folder_for_datetime_and_return_path(self, date_time):
-        """ Creates folder for the current day and returns the path """
+    def __create_folder_for_datetime_and_return_path(self, date_time: datetime) -> str:
+        """ Creates folder for the provided date and returns the path """
 
         year = date_time.year
         month = date_time.month if len(str(date_time.month)) == 2 else f"0{ date_time.month }"
