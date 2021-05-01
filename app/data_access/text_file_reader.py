@@ -1,3 +1,6 @@
+from typing import List
+
+# from core_functionality.file_paths import FilePaths
 
 
 class TextFileReader:
@@ -7,10 +10,11 @@ class TextFileReader:
         pass
 
     
-    def read_lines(self):
+    def read_lines(self, file_path: str) -> List[str]:
         """ Reads all lines from a text file and returns them as a list of strings """
+
         try:
-            with open("./data/app_data/base_qugestions.txt", "r") as file:
+            with open(file_path, "r") as file:
                 return file.readlines()
         except FileNotFoundError:
             raise
