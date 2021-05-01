@@ -110,7 +110,7 @@ nav.navbar > .container {
     min-height: calc(100vh - 56px);
 }
 
-#jumbotron-content {
+.jumbotron-content {
     padding: 2rem;
     background-color: rgba(0,0,0,0.7);
     border-radius: 1rem;
@@ -137,6 +137,23 @@ nav.navbar > .container {
     text-decoration: underline;
 }
 
+#section-thank-you {
+    background-image: url("./../images/processed/celebration-001.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+    color: #fff;
+}
+
+#thank-you-container {
+    height: calc(100vh - 110px - 2rem);
+}
+
+#thank-you-container > .jumbotron-content {
+    background-color: rgba(0,0,0,0.7);
+
+}
 
 #footer {
     background-color: #111;
