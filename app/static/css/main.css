@@ -94,11 +94,22 @@ nav.navbar > .container {
 
 #jumbotron {
     background: linear-gradient(90deg, royalblue, cornflowerblue);
+    background-image: url("./../images/processed/emely/emely-001.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #fff;
 }
 
 #jumbotron > .container {
     min-height: 90vh;
+    min-height: calc(100vh - 56px);
+}
+
+#jumbotron-content {
+    padding: 2rem;
+    background-color: rgba(0,0,0,0.7);
+    border-radius: 1rem;
 }
 
 .section {
