@@ -20,12 +20,12 @@ class DialogueFileManager:
         current_datetime = datetime.datetime.now()
 
         folder_path = self.__get_folder_for_datetime(current_datetime)
-        full_file_path = self.__get_unique_file_name(folder_path)
+        full_file_path = self.__get_unique_file_name(folder_path, current_datetime)
 
         return full_file_path
 
 
-    def __get_unique_file_name(self, folder_path):
+    def __get_unique_file_name(self, folder_path, current_datetime):
         """
         Gets a unique file name consisting of date and time, as well as microseconds.
         Makes sure it is unique before returning it.
