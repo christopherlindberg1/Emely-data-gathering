@@ -3,6 +3,7 @@ from typing import List
 
 from data_access.text_file_reader import TextFileReader
 from data.app_data.base_questions import base_questions
+from core_functionality.file_paths import FilePaths
 
 
 class QuestionGenerator:
@@ -23,7 +24,7 @@ class QuestionGenerator:
         """ Returns a list with all base questions """
 
         try:
-            return self.text_file_reader.read_lines()
+            return self.text_file_reader.read_lines(FilePaths.base_questions_text_file)
         except FileNotFoundError:
             return base_questions
 
