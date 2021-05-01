@@ -22,6 +22,6 @@ class DialogueSaver:
             "episode_done\n"
         ]
 
-        file_path = self.dialogue_file_manager.get_unique_file_path()
+        file_path = self.dialogue_file_manager.get_file_path()
 
         self.text_file_writer.write_lines(file_path, dialogue_lines)
