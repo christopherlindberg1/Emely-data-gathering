@@ -1,4 +1,9 @@
 
+const alertCloseLink = document.getElementById("alert-close-link");
+
+console.log(alertCloseLink);
+
+
 
 // Smooth scroll on nav click
 $(".nav-link, .navbar-brand, .link-scroll").on("click", function(e) {
@@ -33,3 +38,11 @@ document.getElementById("main").addEventListener("click", e => {
     var navMain = $(".navbar-collapse");
     navMain.collapse('hide');
 });
+
+
+if (alertCloseLink != null) {
+    alertCloseLink.addEventListener("click", e => {
+        console.log(e.target.parentNode.parentNode);
+        e.target.parentNode.parentNode.remove()
+    });
+}
