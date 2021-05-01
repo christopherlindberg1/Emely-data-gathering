@@ -25,7 +25,7 @@ def index():
     """ Returns the landing page """
 
     form = Dialogue(request.form)
-    base_question = question_generator.get_random_question()
+    base_question = question_generator.get_random_base_question()
     session["base_question"] = base_question
 
     return render_template("index.html", form = form, base_question = base_question)
