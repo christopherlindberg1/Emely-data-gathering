@@ -1,7 +1,5 @@
 from typing import List
 
-# from core_functionality.file_paths import FilePaths
-
 
 class TextFileReader:
     """ Class with methods for reading from text files """
