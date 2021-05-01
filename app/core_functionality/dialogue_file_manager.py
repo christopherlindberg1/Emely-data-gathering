@@ -14,31 +14,47 @@ class DialogueFileManager:
         pass
 
 
-    def get_unique_file_path(self):
+    def get_file_path(self):
         """ Returns a unique file name for a dialogue """
 
         current_datetime = datetime.datetime.now()
 
         folder_path = self.__get_folder_for_datetime(current_datetime)
-        full_file_path = self.__get_unique_file_name(folder_path, current_datetime)
+        full_file_path = self.__get_unique_file_path(folder_path, current_datetime)
 
         return full_file_path
 
 
-    def __get_unique_file_name(self, folder_path, current_datetime):
+    def __get_unique_file_path(self, folder_path, current_datetime):
         """
         Gets a unique file name consisting of date and time, as well as microseconds.
         Makes sure it is unique before returning it.
         """
 
-        file_name = f"{ randrange(1, 100000001) }.txt"
+        file_name = self.__generate_unique_file_name(folder_path, current_datetime)
         full_file_path = PurePath(folder_path, file_name)
-
-        while os.path.isfile(full_file_path) == True:
-            file_name = f"{ randrange(1, 100000001) }.txt"
-            full_file_path = PurePath(folder_path, file_name)
         
         return full_file_path
+
+    
+    def __generate_unique_file_name(self, folder_path, current_datetime):
+        """ Generates a unique file name """
+
+        while True:
+            year = current_datetime.year
+            month = current_datetime.month if len(str(current_datetime.month)) == 2 else f"0{current_datetime.month}"
+            day = current_datetime.day if len(str(current_datetime.day)) == 2 else f"0{current_datetime.day}"
+            hour = current_datetime.hour if len(str(current_datetime.hour)) == 2 else f"0{current_datetime.hour}"
+            minute = current_datetime.minute if len(str(current_datetime.minute)) == 2 else f"0{current_datetime.minute}"
+            second = current_datetime.second if len(str(current_datetime.second)) == 2 else f"0{current_datetime.second}"
+            random_number = randrange(1, 1_000_000_001)
+
+            file_name = f"{year}-{month}-{day}_{hour}-{minute}-{second}_{random_number}.txt"
+
+            full_file_path = PurePath(folder_path, file_name)
+
+            if os.path.isfile(full_file_path) == False:
+                return file_name
 
 
     def __get_folder_for_datetime(self, date_time):
