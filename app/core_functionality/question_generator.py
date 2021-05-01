@@ -1,8 +1,8 @@
 import random
+from typing import List
 
 from data_access.text_file_reader import TextFileReader
 from data.app_data.base_questions import base_questions
-# from core_functionality.file_paths import FilePaths
 
 
 class QuestionGenerator:
@@ -12,13 +12,16 @@ class QuestionGenerator:
         self.text_file_reader = TextFileReader()
 
 
-    def get_random_question(self):
-        questions = self.get_questions()
+    def get_random_base_question(self) -> str:
+        """ Returns a random question """
+
+        questions = self.get_base_questions()
         return questions[random.randrange(0, len(questions))]
 
 
-    def get_questions(self):
-        """ Gets all questions. Gets them from a source code file if it fails to read from file """
+    def get_base_questions(self) -> List[str]:
+        """ Returns a list with all base questions """
+
         try:
             return self.text_file_reader.read_lines()
         except FileNotFoundError:
