@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 
 import os
-from pathlib import Path
+from pathlib import Path, PurePath
 import sys
 sys.path.append("../")  # Needed to access config file outside of repo
 
 import config
-# from data_access.text_file_reader import TextFileReader
 from core_functionality.dialogue_saver import DialogueSaver
 from core_functionality.question_generator import QuestionGenerator
 
@@ -16,7 +15,7 @@ from forms.dialogue import Dialogue
 app = Flask(__name__)
 app.config["SECRET_KEY"] = config.secret_key
 
-# text_file_reader = TextFileReader()
+
 question_generator = QuestionGenerator()
 dialogue_saver = DialogueSaver()
 
@@ -35,6 +34,7 @@ def index():
 @app.route("/submit-dialogue/", methods = ["POST"])
 def submit_dialogue():
     """ Saves the user generated data to a text file """
+
     form = Dialogue(request.form)
 
     if form.validate() == False:
@@ -46,7 +46,6 @@ def submit_dialogue():
     f_one = request.form["user_follow_up_one"]
     a_two = request.form["user_answer_two"]
     f_two = request.form["user_follow_up_two"]
-    # print(f"OOOOKKKKK...: { base_question }")
 
     dialogue_saver.save_dialogue(base_question, a_one, f_one, a_two, f_two)
     
