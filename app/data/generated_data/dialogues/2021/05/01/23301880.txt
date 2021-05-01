@@ -1,7 +1,0 @@
-episode_start
-emely: What is your best experience from your previous jobs?
-user: I made burgers
-emely: Do you like burgers
-user: A little bit, yes
-emely: Alright, good.
-episode_done

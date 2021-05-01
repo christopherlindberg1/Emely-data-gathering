@@ -1,7 +1,0 @@
-episode_start
-emely: If you are going to work with us, it is good if you have experience from working with others. Can you tell me a little about if you have such experience?
-user: ok
-emely: ok
-user: ok
-emely: ok
-episode_done
