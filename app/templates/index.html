@@ -2,13 +2,13 @@
 
 {% block body %}
 
-<section id="jumbotron" class="section">
+<section id="jumbotron">
     <div class="container d-flex flex-column justify-content-center align-items-center">
         <div id="jumbotron-content">
             <h1 class="display-4 text-center">Emely</h1>
             <p class="lead text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi excepturi minus reiciendis voluptate veniam dignissimos blanditiis natus fugiat, ipsum similique, saepe corporis repellendus maxime nihil odio voluptates alias et consectetur?</p>
             <div class="d-flex justify-content-center align-items-center">
-                <a href="#section-dialogue" class="link-scroll btn btn-success">Talk to Emely</a>
+                <a href="#section-dialogue" class="link-scroll btn btn-success btn-lg">Talk to Emely</a>
             </div>
         </div>
     </div>
@@ -60,7 +60,10 @@
                     {{ form.user_follow_up_two.label(class="p p-lg") }}
                     {{ form.user_follow_up_two(class="form-control") }}
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="d-flex justify-content-left align-items-center">
+                    <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                </div>
+                
             </form>
         </div>
     </div>
