@@ -10,6 +10,7 @@ main {
     border-radius: 0;
     display: relative;
     margin-bottom: 0;
+    z-index: 100;
 }
 
 #alert-close-link-container {
@@ -96,7 +97,7 @@ nav.navbar > .container {
 }
 
 #jumbotron {
-    background: linear-gradient(90deg, royalblue, cornflowerblue);
+    background: linear-gradient(90deg, royalblue, cornflowerblue);  /* Backup if image can't be loaded */
     background-image: url("./../images/processed/emely/emely-001.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -117,14 +118,6 @@ nav.navbar > .container {
 
 .section {
     padding: 2rem 0;
-}
-
-#section-about {
-    background-color: #eee;
-}
-
-#section-dialogue {
-
 }
 
 #dialogue-content {
