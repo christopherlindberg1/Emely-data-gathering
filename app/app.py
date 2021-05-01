@@ -51,8 +51,12 @@ def submit_dialogue():
     
     session["base_question"] = None
     
-    flash("Thank you for your participation!", "success")
-    return redirect(url_for("index"))
+    return redirect(url_for("thank_you"))
+
+
+@app.route("/thank-you/")
+def thank_you():
+    return render_template("thank-you.html")
 
 
 @app.route("/about/")
