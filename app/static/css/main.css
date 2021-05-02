@@ -98,7 +98,7 @@ nav.navbar > .container {
 
 #jumbotron {
     background: linear-gradient(90deg, royalblue, cornflowerblue);  /* Backup if image can't be loaded */
-    background-image: url("./../images/processed/emely/emely-001.jpg");
+    background: url("./../images/processed/emely/emely-001.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -138,7 +138,7 @@ nav.navbar > .container {
 }
 
 #section-thank-you {
-    background-image: url("./../images/processed/celebration-001.jpg");
+    background: url("./../images/processed/celebration-001.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
