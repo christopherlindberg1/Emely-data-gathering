@@ -23,7 +23,6 @@
 
             {% from "partials/_form-helpers.html" import render_field %}
             <form  method="POST" action="./submit-dialogue/">
-                {{ field }}
                 <div class="form-group mb-4">
                     {{ form.user_answer_one.label(class="p p-lg") }}
                     {{ form.user_answer_one(class="form-control") }}
@@ -43,7 +42,6 @@
                 <div class="d-flex justify-content-left align-items-center">
                     <button type="submit" class="btn btn-success btn-lg">Submit</button>
                 </div>
-                
             </form>
         </div>
     </div>
