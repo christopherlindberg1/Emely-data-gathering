@@ -16,7 +16,7 @@ class QuestionGenerator:
     def get_random_base_question(self) -> str:
         """ Returns a random question """
 
-        questions = self.get_base_questions()
+        questions = self.__get_base_questions()
         random_question = questions[random.randrange(0, len(questions))]
 
         # Most questions contain line break when read from file. Remove so they can be stored correctly.
@@ -26,7 +26,7 @@ class QuestionGenerator:
         return random_question
 
 
-    def get_base_questions(self) -> List[str]:
+    def __get_base_questions(self) -> List[str]:
         """ Returns a list with all base questions """
 
         try:
