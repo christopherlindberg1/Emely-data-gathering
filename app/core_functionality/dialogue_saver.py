@@ -26,7 +26,7 @@ class DialogueSaver:
             f"emely: { follow_up_one }\n",
             f"user: { answer_two }\n",
             f"emely: { follow_up_two }\n",
-            "episode_done\n"
+            "episode_done"
         ]
 
         file_path = self.dialogue_file_manager.get_file_path()
