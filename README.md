@@ -84,7 +84,7 @@ secret_key="<your-secret-key-string>"
 This value will be used to configure the Flask app instance in the app.py file.
 
 ## Start the app
-cd into the project root where the file *app.py* is located an run the command:
+Make sure the virtual environment is activate. If you try to start the app when it is not active you will get an error about the packages not being installed (see the section about the virtual environment). cd into the project root where the file *app.py* is located. an run the command:
 
 ```
 $ python app.py
