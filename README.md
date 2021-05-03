@@ -63,10 +63,29 @@ Flask is used to build the web server. Install Flask within the virtual environm
 $ pip install flask
 ```
 
+### Install WTForms and Flask-WTF
+Install the following packages to enable easier form handling.
+
 ```
-pip install WTForms
+$ pip install WTForms
 ```
 
 ```
-pip install Flask-WTF
+$ pip install Flask-WTF
+```
+
+## Config file
+Sensitive data is stored in a config file outside of the repo. This file is imported to app.py. For the app to run, there must be a file named *config.py* one level above the project root. Inside this file there must be (for this specific project) one variable for a secret key, like this:
+
+```
+secret_key="<your-secret-key-string>"
+```
+
+This value will be used to configure the Flask app instance in the app.py file.
+
+## Start the app
+cd into the project root where the file *app.py* is located an run the command:
+
+```
+$ python app.py
 ```
