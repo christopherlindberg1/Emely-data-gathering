@@ -1,7 +1,0 @@
-episode_start
-emely: Is there anything you want to ask about this job?
-user: ok
-emely: ok
-user: ok
-emely: ok
-episode_done

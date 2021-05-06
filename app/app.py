@@ -1,19 +1,21 @@
 from flask import Flask, render_template, request, flash, redirect, url_for, session
 
-import os
-from pathlib import Path, PurePath
 import sys
 sys.path.append("../")  # Needed to access config file outside of repo
 
 import config
 from core_functionality.dialogue_saver import DialogueSaver
 from core_functionality.question_generator import QuestionGenerator
-
 from forms.dialogue import Dialogue
+
+# from site.routes import site
 
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = config.secret_key
+
+# Set up routes / blueprints
+# app.register_blueprint(site)
 
 
 question_generator = QuestionGenerator()

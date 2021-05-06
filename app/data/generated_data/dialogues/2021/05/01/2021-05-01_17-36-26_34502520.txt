@@ -1,7 +1,0 @@
-episode_start
-emely: Is there anything you want to ask about this job?
-user: What will my salary be??
-emely: Why the attitude?
-user: I just want some money, madam.
-emely: How much did you make at your previous job?
-episode_done
